@@ -10,10 +10,10 @@ RUN mv bintray-kong-kong-rpm.repo /etc/yum.repos.d/
 RUN yum update -y
 RUN yum install -y kong
 
-COPY docker-entrypoint.sh /docker-entrypoint.sh
+#COPY docker-entrypoint.sh /docker-entrypoint.sh
 
-ENTRYPOINT ["/docker-entrypoint.sh"]
+#ENTRYPOINT ["/docker-entrypoint.sh"]
 
 EXPOSE 8000 8443 8001 8444
 
-CMD ["kong", "docker-start"]
+#CMD ["kong", "docker-start"]
