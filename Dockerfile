@@ -1,4 +1,4 @@
-FROM centos:7.5
+FROM centos:7
 LABEL maintainer="Sirichai Kiatwanitwilai"
 
 RUN yum update -y
