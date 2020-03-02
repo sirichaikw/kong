@@ -10,7 +10,7 @@ RUN mv bintray-kong-kong-rpm.repo /etc/yum.repos.d/
 RUN yum update -y
 RUN yum install -y kong
 RUN kong config init
-RUN kong start [-c /etc/kong.conf]
+RUN kong start -c /etc/kong/kong.conf.default
 
 #COPY docker-entrypoint.sh /docker-entrypoint.sh
 
