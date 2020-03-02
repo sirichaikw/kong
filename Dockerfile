@@ -1,4 +1,4 @@
-FROM centos:7
+FROM centos:latest
 LABEL maintainer="Sirichai Kiatwanitwilai"
 
 ENV KONG_VERSION 2.0.1
