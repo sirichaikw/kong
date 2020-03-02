@@ -4,6 +4,9 @@ LABEL maintainer="Sirichai Kiatwanitwilai"
 RUN yum update -y
 RUN yum install -y wget
 RUN wget https://bintray.com/kong/kong-rpm/rpm -O bintray-kong-kong-rpm.repo
+RUN sed -i -e 's/baseurl.*/&\/centos\/'$major_version''/ bintray-kong-kong-rpm.repo
+RUN sudo mv bintray-kong-kong-rpm.repo /etc/yum.repos.d/
+RUN yum update -y
 RUN yum install -y kong
 
 COPY docker-entrypoint.sh /docker-entrypoint.sh
